@@ -1,6 +1,9 @@
 import React from "react";
 
-function SearchBar() {
+function SearchBar({ sort, sortStocks }) {
+
+  console.log(sort)
+
   return (
     <div>
       <strong>Sort by:</strong>
@@ -10,7 +13,7 @@ function SearchBar() {
           value="Alphabetically"
           name="sort"
           checked={null}
-          onChange={null}
+          onChange={sortStocks}
         />
         Alphabetically
       </label>
@@ -20,7 +23,7 @@ function SearchBar() {
           value="Price"
           name="sort"
           checked={null}
-          onChange={null}
+          onChange={sortStocks}
         />
         Price
       </label>
